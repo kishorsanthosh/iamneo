@@ -9,7 +9,7 @@ body{
     margin-left: 6px;
     margin-top: 20px;
     border-left: 5px solid rgb(126, 17, 17);
-    height: 770px;
+    height: 950px;
     
 
     
@@ -159,4 +159,20 @@ margin-top: 10px;
     margin-left: 1rem;
     margin-top: 2rem;
   }
- 
+  .circlesss {
+    background-color: #68a6cc;
+    border-radius: 40px;
+    margin-left: 10px;
+}
+
+.circle-innersss {
+  color: rgb(217, 217, 217);
+  display: table-cell;
+  vertical-align: middle; 
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  height: 25px;
+  width: 25px;  
+  font-size: 12px;
+}
