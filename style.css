@@ -1,5 +1,5 @@
 body{
-    width: 100%;
+    width: 90%;
     height: 100%;
    
 }
@@ -85,7 +85,7 @@ margin-top: 10px;
 }
 .headleft{
     display: flex;
-    margin-left: -6rem;
+    margin-left: 4rem;
 }
 .headr{
     display: flex;
@@ -156,59 +156,7 @@ margin-top: 10px;
     margin-top: -3px;
   }
   .mainsection{
-    margin-left: -9rem;
+    margin-left: 1rem;
     margin-top: 2rem;
   }
-  .jobs
-{
-    padding: 1.3rem;
-    margin: .1rem;
-}
-
-.job
-{
-    color: #000000;
-    font-size: 0.9rem;
-}
-
-.jobs1
-{
-    padding-top: 1.3rem;
-    padding-right: 1.3rem;
-    padding-left: 1.3rem;
-}
-
-.aligns{
-    padding-top: 1.3rem;
-    padding-right: 1.3rem;
-    padding-left: 1.3rem;
-    
-}
-
-.butt{
-    outline: none;
-}
-
-.cardses{
-    padding: 1rem;
-    margin-top: -1rem;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.rating{
-    font-size: 13px;
-}
-
- .rating__star {
-    cursor: pointer;
- }
-
- #widths{
-    width: 23.5%;
- }
- .addc{
-    margin-right: -5rem;
- }
  
