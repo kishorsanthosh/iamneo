@@ -1,1123 +1,494 @@
 <!DOCTYPE html>
 <html lang="en-us">
+
 <head>
     <title>iamneo.ai Talent Center</title>
-    <link href="style.css" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAP -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
     <!-- BOOTSTRAP -->
 
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/fa6a8ba345.js" crossorigin="anonymous"></script>
-    <!-- FONTAWESOME -->
+    <!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- CSS FILE -->
     
-    <body>
-    <!-- START -->
-<div class="fullcontent">
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS FILE -->
 
-    <!-- SIDEBAR START-->
-    <div id="sidebar" class="sideb">
-        <a href="#" class="fa fa-user-alt" id="userc"></a>
-        <a href="#" class="fa fa-home" ></a>
-        <div class="book pull-left">
-            <span class="fa fa-book msg-icon icon-headernav"></span>
-            <div class='notification-dot'></div>
-       </div>
-       <!-- DOTICON -->
-       <div class="dot">
-        <a href="#" class="fas fa-briefcase " id="jobicon"></a>
-        <p class="tdot"><span class="fa fa-ellipsis-v"></span></p>
-       </div>
-       <div class="dot1">
-        <a href="#" class="fas fa-users " ></a>
-        <p class="tdot"><span class="fa fa-ellipsis-v"></span></p>
-       </div>
-    </div>
-    <!-- SIDEBAR END -->
+    <body onload="starter()">
 
-    <!-- BODY CONTENT START -->
-    <div class="container" >
-        <div class="head">
-            <div class="headleft">
-                <a href="#" class="fa fa-user-alt" id="user"></a>
-                <p class="headtitle">iamneo.ai Talent Center</p>
-            </div>
-            <div class="headr">
-                <div class="headr">
-                    
-                    <div class="input-group " id="search">
-                        <input type="text" class="form-control" placeholder="Search ...">
-                        <span class="input-group-text"><span class="fa fa-search"></span></span>
-                    </div>&nbsp;
-                    <button type="button" class="btn btn btn-sm" id="addbutton"><small><span class="fa fa-plus"></span></small>&nbsp; Add new</button>
-                </div>
-                <div class="gif1">
-                <div class="gift">
+        <div>
+            <div class="fullcontent">
+
+                <!-- SIDEBAR START-->
+                <div id="sidebar" class="sideb">
+                    <a href="#" class="fa fa-user-alt" id="userc"></a>
+                    <a href="#" class="fa fa-home" ></a>
                     <div class="book pull-left">
-                        <span class="fa fa-gift " id="gift"></span>
+                        <span class="fa fa-book msg-icon icon-headernav"></span>
                         <div class='notification-dot'></div>
                    </div>
+                   <!-- DOTICON -->
+                   <div class="dot">
+                    <a href="#" class="fas fa-briefcase " id="jobicon"></a>
+                    <p class="tdot"><span class="fa fa-ellipsis-v"></span></p>
+                   </div>
+                   <div class="dot1">
+                    <a href="#" class="fas fa-users " ></a>
+                    <p class="tdot"><span class="fa fa-ellipsis-v"></span></p>
+                   </div>
                 </div>
-                <div class="question">
-                    <span class="fa fa-question" id="circleq"></span>
-                </div>
-                <div class="circle">
-                    <p class="circle-inner">S</p>
-                  </div>
-                </div>
-
-            </div>
+                <!-- SIDEBAR END -->
             
-    
-        </div> 
-    <div class="mainsection">
-        
-          <div class="d-flex jobs justify-content-between" style="background-color: #f0f0f7;">
+                <!-- BODY CONTENT START -->            
+            </div>
+        </div>
+
+        <div style="background-color: #f0f0f7; padding-left: .6rem; padding-top: .8rem; padding-right: .6rem; display: flex; justify-content: space-between;" id="logos">
             <div>
-              <span class="fa-solid fa-suitcase job"></span>
-              <span style="font-size: 0.8rem;">Jobs&nbsp;&nbsp;>&nbsp;&nbsp;Full-stack Developer &nbsp;</span>
-              <div class="btn-group">
-                <button class="btn btn-secondary btn-sm" type="button" style="background-color: #fafaff; color: black; font-size: 0.8rem;">
+                <span class="fa fa-user-alt icons"></span> iamneo Talent Center
+            </div>
+
+            <div class="d-flex justify-content-around" id="hellworld">
+                <div class="input-group searchbar">
+                    <input type="text" class="form-control" placeholder="Search ...">
+                    <span class="input-group-text"><span class="fa fa-search" style="cursor: pointer;"></span></span>
+                </div>
+                <div style="padding-right: .6rem;">
+                    <form action="#">
+                        <span input type="text" placeholder=" Search Courses" name="search">
+                            <div><button type="button" class="btn btn-sm" style="background-color: #0a3456; color: #ffffff;" id="formadd" onclick="addnew()">Add</button></div>
+                    </form>
+                </div>
+                <div>
+                    <span class="fa-solid fa-circle-user" style="font-size: 2rem; color: #0a3456;"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex jobs justify-content-between" style="background-color: #f0f0f7;">
+            <div>
+                <span class="fa-solid fa-suitcase job"></span>
+                <span style="font-size: 0.8rem;">Jobs&nbsp;&nbsp;>&nbsp;&nbsp;Full-stack Developer &nbsp;</span>
+                <div class="btn-group vjdstyle1">
+                    <button class="btn btn-secondary btn-sm" type="button" style="background-color: #fafaff; color: black; font-size: 0.8rem;">
                   View Job Details
                 </button>
-              </div>
+                </div>
+                <br>
+                <div class="btn-group vjdstyle">
+                    <button class="btn btn-secondary btn-sm" type="button" style="background-color: #fafaff; color: black; font-size: 0.8rem;">
+                  View Job Details
+                </button>
+                </div>
             </div>
 
-            <div>
-              <div class="btn-group">
-                <button class="btn btn-light btn-sm" id="addc"type="button" style="background-color: #fafaff; color: black; border: 0.1px solid rgb(145, 138, 138);font-size: 0.8rem;">
+            <div class="addsmall">
+                <div class="btn-group addsmall">
+                    <button class="btn btn-light btn-sm" type="button" style="background-color: #fafaff; color: black; border: 0.1px solid rgb(145, 138, 138);font-size: 0.8rem;">
                   Add Candidate
                 </button>
-                <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="border: 0.1px solid rgb(145, 138, 138);">
+                    <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="border: 0.1px solid rgb(145, 138, 138);">
                   <span class="visually-hidden">Toggle Dropdown</span>
                 </button>
-                <ul class="dropdown-menu">
-                  <li>iamneo - 1</li>
-                  <li>iamneo - 2</li>
-                </ul>&nbsp;&nbsp;
-                <div><button type="button" class="btn btn-sm" style="background-color: rgb(35, 47, 132); color: #ffffff;font-size: 0.8rem;"><span class="fa fa-globe"></span>&nbsp;Published</button></div>
-              </div>
+                    <ul class="dropdown-menu">
+                        <li>iamneo - 1</li>
+                        <li>iamneo - 2</li>
+                    </ul>&nbsp;&nbsp;&nbsp;
+                    <div><button type="button" class="btn btn-sm" style="background-color: #0a3456; color: #ffffff;font-size: 0.8rem;">Publish</button></div>
+                </div>
             </div>
-          </div>
+        </div>
 
-          <div class="jobs1 d-flex justify-content-between">
+        <div class="btn-group addsmall1">
+            <div style="margin-left: 4.8rem; width: 100%;">
+                <button class="btn btn-light btn-sm" type="button" style="background-color: #fafaff; color: black; border: 0.1px solid rgb(145, 138, 138);font-size: 0.8rem;" id="addbtns">
+                Add Candidate
+                </button>
+                <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" style="border: 0.1px solid rgb(145, 138, 138);">
+                <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>iamneo - 1</li>
+                    <li>iamneo - 2</li>
+                </ul>&nbsp;&nbsp;&nbsp;
+            </div>
+            <div>
+                <button type="button" class="btn btn-sm" style="background-color: rgb(35, 47, 132); color: #ffffff; font-size: 0.8rem; margin-right: 1rem;">Publish</button>
+            </div>
+        </div>
+
+        <div class="jobs1 d-flex justify-content-between">
             <div class="d-flex">
-                <div style="margin-top: .1rem;"><p style="font-size: 0.8rem;">All Candidates -</p></div>
-                  <div>
+                <div style="margin-top: .1rem;">
+                    <p style="font-size: 0.8rem;">All Candidates -</p>
+                </div>
+                <div>
                     <div class="btn-group">
-                    <button class="btn btn-light btn-sm butt" type="button" style="font-size: 0.8rem; background: none;border: 0px; height: 5px;">
+                        <button class="btn btn-light btn-sm butt" type="button" style="font-size: 0.8rem; background: none;border: 0px; height: 5px;">
                       Active (32)
                     </button>
-                    <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split butt" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: 0px; height: 30px;">
+                        <button type="button" class="btn btn-sm btn-light dropdown-toggle dropdown-toggle-split butt" data-bs-toggle="dropdown" aria-expanded="false" style="background: none; border: 0px; height: 30px;">
                       <span class="visually-hidden">Toggle Dropdown</span>
                     </button>
-                    <ul class="dropdown-menu">
-                      ...
-                    </ul>
-                  </div>
+                        <ul class="dropdown-menu">
+                            ...
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div>
-              <span class="fa-solid fa-list"></span>
+                <span class="fa-solid fa-list" style="cursor: pointer;"></span>
             </div>
-          </div>
+        </div>
+        <!-- CARDS -->
 
-          <!-- CARDS -->
-
-          <div> <!-- start -->
-
-            <div class="d-flex justify-content-between">
-                <div style="padding: .5rem; width: 20%;">
-                    <div class="card" style="border-left-color: rgb(43, 21, 107); border-left-width: 8px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                    <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
-                        <h6 class="card-title">Open - 11</h6>
-                    </div>
+        <div>
+            <div class="start1">
+                <!-- start1 here -->
+                <!-- OPEN -->
+                <div class="topcard">
+                    <div class="card" style="border-left-color: rgb(43, 21, 107); border-left-width: 6px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
+                        <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
+                            <h6 class="card-title">Open - 11</h6>
+                        </div>
                     </div>
                 </div>
+                <!-- OPEN -->
 
-                <div style="padding: .5rem; width: 20%;">
-                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 8px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                    <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
-                        <h6 class="card-title">Contacted - 5</h6>
+                <!-- contacted -->
+                <div class="topcard">
+                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 6px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
+                        <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
+                            <h6 class="card-title">Contacted - 5</h6>
+                        </div>
                     </div>
+
+
+
+                </div>
+                <!-- contected -->
+
+                <!-- written test -->
+                <div class="topcard">
+                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 6px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
+                        <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
+                            <h6 class="card-title">Written test - 10</h6>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- written test -->
+
+                <!-- written test completed -->
+                <div class="topcard">
+                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 6px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
+                        <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
+                            <h6 class="card-title">Written Test completed - 3</h6>
+                        </div>
                     </div>
                 </div>
+                <!-- written test completed -->
 
-                <div style="padding: .5rem; width: 20%;">
-                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 8px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                    <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
-                        <h6 class="card-title">Written test - 10</h6>
-                    </div>
+                <!-- newton school -->
+                <div class="topcard">
+                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 6px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
+                        <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
+                            <h6 class="card-title">Newton School</h6>
+                        </div>
                     </div>
                 </div>
+                <!-- newton school -->
+            </div>
+            <!-- start1 end here -->
+        </div>
 
-                <div style="padding: .5rem; width: 20%;">
-                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 8px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                    <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
-                        <h6 class="card-title">Written Test completed - 3</h6>
-                    </div>
-                    </div>
-                </div>
+        <!-- cards starts here -->
 
-                <div style="padding: .5rem; width: 20%;">
-                    <div class="card" style="border-left-color: rgb(255, 234, 3); border-left-width: 8px; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                    <div class="card-body" style="margin: 0px; padding-bottom: 5px; padding-top: 10px;">
-                        <h6 class="card-title">Newton School</h6>
+        <!-- cards end here -->
+
+        <!-- MODALS -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="display: none;" id="modalclick1">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add new</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <div class="modal-body">
+                        <!-- CONTENT -->
+                        <div>
+                            <span> Name : <br></span><span><input type="text" name="nameinp" id="nameid"/></span><br><br>
+                            <span> Company Name : <br><input type="text" name="cmpimp" id='cmpid'/> </span><br><br>
+                            <span> Req No. : <br><input type="text" name="reqimp" id="reqid"/></span>
+                        </div>
+                        <!-- CONTENT -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal" onclick="closes()">Close</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="putData">create</button>
                     </div>
                 </div>
             </div>
-          </div> <!--end-->
-        <div class="d-flex flex-row justify-content-evenly"> <!--Line one -->
-          <div style="padding: 1rem; width: 20%;">
-            <div style="margin-top: -.5rem;" class="col-sm">
-                <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                  <div class="card-group">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Gowtham Shanmugam</h5>
-                        <div style="display: flex; justify-content: space-between;">
-                          <div>
-                            <p class="card-text" style="font-weight: 600; font-size: .8rem;">EMBARKCLE</p>
-                          </div>
-                          <div>
-                            <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-footer">
-                        <div style="display: flex; justify-content: space-between;">
-                          <div class="rating" style="font-size: .8rem;">
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                          </div>
-                          <div style="margin-top:.1rem;">
-                            <span class="fa-solid fa-ellipsis-vertical"></span>
-                          </div>
-                        </div>
-                      </div>
+        </div>
+        <!-- MODALS END -->
+
+        <!-- UPDATE MODAL -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="crud"  style="display: none;">
+            Launch demo modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Update</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <td>Name:<br></td>
+                        <td><input type="text" name="updatename"></td> <br><br>
+                        <td>Company Name:<br></td>
+                        <td><input type="text" name="updatecmpname"></td>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="updateBtn">Save changes</button>
                     </div>
                 </div>
-              </div>
-          </div>
+            </div>
         </div>
+        <!-- UPDATE MODAL -->
 
-        <div style="padding: 1rem; width: 20%;">
-            <div style="margin-top: -.5rem;" class="col-sm-">
-                <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                  <div class="card-group">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Ankur Srivastava</h5>
-                        <div style="display: flex; justify-content: space-between;">
-                          <div>
-                            <p class="card-text" style="font-size: .8rem;">InTimeTec</p>
-                          </div>
-                          <div>
-                            <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-footer">
-                        <div style="display: flex; justify-content: space-between;">
-                          <div class="rating" style="font-size: .8rem;">
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                          </div>
-                          <div class="circlesss" style="margin-left: 2rem;">
-                            <p class="circle-innersss">S</p>
-                          </div>
-                          <div style="margin-top:.1rem;">
-                            <span class="fa-solid fa-ellipsis-vertical"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-          </div>
-        </div>
+        <!-- SCRIPTS -->
 
-        <div style="padding: 1rem; width: 20%;">
-            <div style="margin-top: -.5rem;" class="col-sm-" >
-                <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                  <div class="card-group">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Vignesh R</h5>
-                        <div style="display: flex; justify-content: space-between;">
-                          <div>
-                            <p class="card-text" style="font-weight: 600; font-size: .8rem;"></p>
-                          </div>
-                          <div>
-                            <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card-footer">
-                        <div style="display: flex; justify-content: space-between;">
-                          <div class="rating" style="font-size: .8rem;">
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                          </div>
-                          <div class="circlesss" style="margin-left: 2rem;">
-                            <p class="circle-innersss">S</p>
-                          </div>
-                          <div style="margin-top:.1rem;">
-                            <span class="fa-solid fa-ellipsis-vertical"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-          </div>
-        </div>
+        <script>
+            function addnew() {
+                document.getElementById("modalclick1").click();
+            }
+        </script>
 
-        <div style="padding: 1rem; width: 20%;">
-            <div style="margin-top: -.5rem;" class="col-sm">
-                <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                  <div class="card-group">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Sanjay R</h5>
-                        <div style="display: flex; justify-content: space-between;">
-                            <div>
-                              <p class="card-text" style="font-size: .8rem;">PSG College</p>
+        <script>
+            function click5() {
+                document.getElementById("dddown").click();
+            }
+            const updates = document.getElementsByClassName('updater');
+            for(x in updates){
+                updates.addEventListener('click',update(updates.id));
+            }
+            function update(id) {
+                let x = document.getElementById("crud");
+                x.idU = id;
+                //x.click();
+
+
+            }
+        </script>
+
+        <script>
+            const ratingStars = [...document.getElementsByClassName("rating__star")];
+
+            function executeRating(stars) {
+            const starClassActive = "rating__star fas fa-star";
+            const starClassInactive = "rating__star far fa-star";
+            const starsLength = stars.length;
+            let i;
+            stars.map((star) => {
+                star.onclick = () => {
+                i = stars.indexOf(star);
+
+                if (star.className===starClassInactive) {
+                    for (i; i >= 0; --i) stars[i].className = starClassActive;
+                } else {
+                    for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+                }
+                };
+            });
+            }
+            executeRating(ratingStars);
+        </script>
+        <!-- SCRIPTS END -->
+
+        <script type="module">
+            // Import the functions you need from the SDKs you need 
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js"; 
+            // TODO: Add SDKs for Firebase products that you want to use // https://firebase.google.com/docs/web/setup#available-libraries
+            // Your web app's Firebase configuration 
+            const firebaseConfig = { apiKey: "AIzaSyAvZGvhJywNJuKOwno510DY4MvaedXS2Cc", authDomain: "iamneo-63ab5.firebaseapp.com", projectId: "iamneo-63ab5", storageBucket: "iamneo-63ab5.appspot.com", messagingSenderId:
+            "167780514801", appId: "1:167780514801:web:cab82266955147ab8ba250" }; 
+            // Initialize Firebase 
+            const app = initializeApp(firebaseConfig); import {getDatabase,ref,child,set,update,remove,onValue} from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+            const db = getDatabase(); //get 
+            let users;
+            let allusers;
+             function starter(){
+                users = ref(db,'users'); 
+                 
+                onValue(users,(snapshot)=>{ 
+                    allusers = JSON.stringify(snapshot.val());
+                    console.log(allusers);
+                    allusers = JSON.parse(allusers);
+                let i=0;
+                let code = '';
+                for(let x in allusers){
+                    console.log(allusers[x]);
+                    if(i==0){
+
+                        code=code+`<div class="allcardstyles">
+
+                    <div class="alldowncards">
+                        <div class="card">
+                            <div class="card-body">
+                                <span class="texteditor">`+allusers[x].name+`</span> <br>
+                                <span class="subtexteditor">`+allusers[x].company+`</span> <br>
+                                <span class="reqnumber">REQ: #`+allusers[x].id+`</span>
                             </div>
-                            <div>
-                              <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="rating" style="font-size: .8rem;">
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                </div>
+                                <div class="dropdown">
+                                    <!-- <span class="fa-solid fa-ellipsis-vertical menudr" onclick = "click5()" id="click15"></span> -->
+                                    <span class="fa-solid fa-ellipsis-vertical menudr" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: block;" id="dddown"></span>
+                                    <ul class="dropdown-menu">
+                                        <li class="updater" id = `+allusers[x].id+`><a class="dropdown-item" href="#" style="font-size: .8rem;" onclick="update()">Update</a></li>
+                                        <li><a class="dropdown-item" href="#" style="font-size: .8rem;">Delete</a></li>
+                                    </ul>
+                                </div>
                             </div>
-                          </div>
-                      </div>
-                      <div class="card-footer">
-                        <div style="display: flex; justify-content: space-between;">
-                          <div class="rating" style="font-size: .8rem;">
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                          </div>
-                          <div class="circlesss" style="margin-left: 2rem;">
-                            <p class="circle-innersss">T</p>
-                          </div>
-                          <div style="margin-top:.1rem;">
-                            <span class="fa-solid fa-ellipsis-vertical"></span>
-                          </div>
                         </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-          </div>
-        </div>
+                    </div>`
+                            }
+                    else if(i%5==0){
+                            code=code+`</div>
+                            <div class="allcardstyles">
 
-        <div style="padding: 1rem; width: 20%;">
-            <div style="margin-top: -.5rem;" class="col-sm">
-                <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                  <div class="card-group">
-                    <div class="card">
-                      <div class="card-body">
-                        <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Abhishek Kumar</h5>
-                        <div style="display: flex; justify-content: space-between;">
-                          <div>
-                            <p class="card-text" style="font-size: .8rem;">BYJUS</p>
-                          </div>
-                          <div>
-                            <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                          </div>
+                    <div class="alldowncards">
+                        <div class="card">
+                            <div class="card-body">
+                                <span class="texteditor">`+allusers[x].name+`</span> <br>
+                                <span class="subtexteditor">`+allusers[x].company+`</span> <br>
+                                <span class="reqnumber">REQ: #`+allusers[x].id+`</span>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="rating" style="font-size: .8rem;">
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                </div>
+                                <div class="dropdown">
+                                    <!-- <span class="fa-solid fa-ellipsis-vertical menudr" onclick = "click5()" id="click15"></span> -->
+                                    <span class="fa-solid fa-ellipsis-vertical menudr" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: block;" id="dddown"></span>
+                                    <ul class="dropdown-menu">
+                                        <li class="updater" id = `+allusers[x].id+`><a class="dropdown-item" href="#" style="font-size: .8rem;" onclick="update()">Update</a></li>
+                                        <li><a class="dropdown-item" href="#" style="font-size: .8rem;">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="card-footer">
-                        <div style="display: flex; justify-content: space-between;">
-                          <div class="rating" style="font-size: .8rem;">
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                            <span class="rating__star far fa-star"></span>
-                          </div>
-                          <div class="circlesss" style="margin-left: 2rem;">
-                            <p class="circle-innersss">T</p>
-                          </div>
-                          <div style="margin-top:.1rem;">
-                            <span class="fa-solid fa-ellipsis-vertical"></span>
-                          </div>
+                    </div>`
+                        }
+                        else{
+                            code=code+`<div class="alldowncards">
+                        <div class="card">
+                            <div class="card-body">
+                                <span class="texteditor">`+allusers[x].name+`</span> <br>
+                                <span class="subtexteditor">`+allusers[x].company+`</span> <br>
+                                <span class="reqnumber">REQ: #`+allusers[x].id+`</span>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between">
+                                <div class="rating" style="font-size: .8rem;">
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                    <span class="rating__star far fa-star"></span>
+                                </div>
+                                <div class="dropdown">
+                                    <!-- <span class="fa-solid fa-ellipsis-vertical menudr" onclick = "click5()" id="click15"></span> -->
+                                    <span class="fa-solid fa-ellipsis-vertical menudr" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="display: block;" id="dddown"></span>
+                                    <ul class="dropdown-menu">
+                                        <li class="updater" id = `+allusers[x].id+`><a class="dropdown-item" href="#" style="font-size: .8rem;" onclick="update()">Update</a></li>
+                                        <li><a class="dropdown-item" href="#" style="font-size: .8rem;">Delete</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
+                    </div>`;
+                        }
+                        i=i+1;
+                }
+                $('body').append(code)
+            
+                     }
+                    )
+                }
+                
+            function allIds(){ const ids=[]; let i=0; for(let x in allusers){ ids[i]=x.id; i=i+1; }
+            return ids; } //put 
+            var id,name,company; var putbtn = document.getElementById('putData'); function putData(){ let ids = allIds(); let create = false; id = document.getElementById('reqid'); for(let x in ids) { if(x==id.value){ 
+                alert('ReqId already taken'); 
+                create = false; 
+                break; 
+                } 
+                else{ create = true; } 
+                } 
+                if(create){ name =document.getElementById('nameid'); 
+                company = document.getElementById('cmpid'); 
+                console.log(id.value);
+                console.log(name.value);
+                console.log(company.value);
+                set(ref(db,"users/"+id.value),{
+                    id: id.value, 
+                    name: name.value, 
+                    company:company.value })
+                .then(() => { console.log('#//#'); 
+            location.reload();
+})
+                .catch((err) => { console.log(err); }); } } 
+                function updateData() {
+                   id = document.getElementById('crud').idU;
+                   name = document.getElementById('updatename').value;
+                   company = document.getElementById('updatecmpname').value;
+                   set(ref(db,"users/"+id.value),{
+                    id: id.value, 
+                    name: name.value, 
+                    company:company.value })
+                .then(() => { console.log('#//#'); 
+            location.reload();
+            })
+                .catch((err) => { console.log(err); }); } 
+                
+                putbtn.addEventListener('click',putData);
+                starter();
+                document.getElementById('updateBtn').addEventListener('click',updateData);
+        </script>
 
-    <div class="d-flex flex-row justify-content-evenly"> <!--Line one -->
-        <div style="padding: 1rem; width: 20%;">
-          <div style="margin-top: -.5rem;" class="col-sm">
-              <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                <div class="card-group">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Gowtham Shanmugam</h5>
-                      <div style="display: flex; justify-content: space-between;">
-                        <div>
-                          <p class="card-text" style="font-weight: 600; font-size: .8rem;">EMBARKCLE</p>
-                        </div>
-                        <div>
-                          <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <div style="display: flex; justify-content: space-between;">
-                        <div class="rating" style="font-size: .8rem;">
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                        </div>
-                        <div style="margin-top:.1rem;">
-                          <span class="fa-solid fa-ellipsis-vertical"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div style="padding: 1rem; width: 20%;">
-          <div style="margin-top: -.5rem;" class="col-sm-">
-              <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                <div class="card-group">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Ankur Srivastava</h5>
-                      <div style="display: flex; justify-content: space-between;">
-                        <div>
-                          <p class="card-text" style="font-size: .8rem;">InTimeTec</p>
-                        </div>
-                        <div>
-                          <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <div style="display: flex; justify-content: space-between;">
-                        <div class="rating" style="font-size: .8rem;">
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                        </div>
-                        <div style="margin-top:.1rem;">
-                          <span class="fa-solid fa-ellipsis-vertical"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div style="padding: 1rem; width: 20%;">
-          <div style="margin-top: -.5rem;" class="col-sm-" >
-              <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                <div class="card-group">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Vignesh R</h5>
-                      <div style="display: flex; justify-content: space-between;">
-                        <div>
-                          <p class="card-text" style="font-weight: 600; font-size: .8rem;"></p>
-                        </div>
-                        <div>
-                          <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <div style="display: flex; justify-content: space-between;">
-                        <div class="rating" style="font-size: .8rem;">
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                        </div>
-                        <div style="margin-top:.1rem;">
-                          <span class="fa-solid fa-ellipsis-vertical"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div style="padding: 1rem; width: 20%;">
-          <div style="margin-top: -.5rem;" class="col-sm">
-              <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                <div class="card-group">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Sanjay R</h5>
-                      <div style="display: flex; justify-content: space-between;">
-                          <div>
-                            <p class="card-text" style="font-size: .8rem;">PSG College</p>
-                          </div>
-                          <div>
-                            <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                      <div style="display: flex; justify-content: space-between;">
-                        <div class="rating" style="font-size: .8rem;">
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                        </div>
-                        <div style="margin-top:.1rem;">
-                          <span class="fa-solid fa-ellipsis-vertical"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-      <div style="padding: 1rem; width: 20%;">
-          <div style="margin-top: -.5rem;" class="col-sm">
-              <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-                <div class="card-group">
-                  <div class="card">
-                    <div class="card-body">
-                      <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Abhishek Kumar</h5>
-                      <div style="display: flex; justify-content: space-between;">
-                        <div>
-                          <p class="card-text" style="font-size: .8rem;">BYJUS</p>
-                        </div>
-                        <div>
-                          <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <div style="display: flex; justify-content: space-between;">
-                        <div class="rating" style="font-size: .8rem;">
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                          <span class="rating__star far fa-star"></span>
-                        </div>
-                        <div style="margin-top:.1rem;">
-                          <span class="fa-solid fa-ellipsis-vertical"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-      </div>
-  </div>
-
-  <div class="d-flex flex-row justify-content-evenly"> <!--Line one -->
-    <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Gowtham Shanmugam</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-weight: 600; font-size: .8rem;">EMBARKCLE</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm-">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Ankur Srivastava</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-size: .8rem;">InTimeTec</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm-" >
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Vignesh R</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-weight: 600; font-size: .8rem;"></p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Sanjay R</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                      <div>
-                        <p class="card-text" style="font-size: .8rem;">PSG College</p>
-                      </div>
-                      <div>
-                        <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                      </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Abhishek Kumar</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-size: .8rem;">BYJUS</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-
-<div class="d-flex flex-row justify-content-evenly"> <!--Line one -->
-    <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Gowtham Shanmugam</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-weight: 600; font-size: .8rem;">EMBARKCLE</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm-">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Ankur Srivastava</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-size: .8rem;">InTimeTec</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm-" >
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Vignesh R</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-weight: 600; font-size: .8rem;"></p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Sanjay R</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                      <div>
-                        <p class="card-text" style="font-size: .8rem;">PSG College</p>
-                      </div>
-                      <div>
-                        <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                      </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Abhishek Kumar</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-size: .8rem;">BYJUS</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-
-<div class="d-flex flex-row justify-content-evenly"> <!--Line one -->
-    <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Gowtham Shanmugam</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-weight: 600; font-size: .8rem;">EMBARKCLE</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm-">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Ankur Srivastava</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-size: .8rem;">InTimeTec</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm-" >
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Vignesh R</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-weight: 600; font-size: .8rem;"></p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Sanjay R</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                      <div>
-                        <p class="card-text" style="font-size: .8rem;">PSG College</p>
-                      </div>
-                      <div>
-                        <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                      </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div style="padding: 1rem; width: 20%;">
-      <div style="margin-top: -.5rem;" class="col-sm">
-          <div style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; margin: 0px; padding: 0px;">
-            <div class="card-group">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: #17177b; font-size: .8rem;">Abhishek Kumar</h5>
-                  <div style="display: flex; justify-content: space-between;">
-                    <div>
-                      <p class="card-text" style="font-size: .8rem;">BYJUS</p>
-                    </div>
-                    <div>
-                      <p class="card-text" style="margin-top: 1rem; margin-bottom: -.8rem; font-size: .8rem;">REQ: #1062</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <div style="display: flex; justify-content: space-between;">
-                    <div class="rating" style="font-size: .8rem;">
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                      <span class="rating__star far fa-star"></span>
-                    </div>
-                    <div style="margin-top:.1rem;">
-                      <span class="fa-solid fa-ellipsis-vertical"></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-        </div>
-    </div>
-  </div>
-</div>
-
-<script>
-    const ratingStars = [...document.getElementsByClassName("rating__star")];
-
-    function executeRating(stars) {
-      const starClassActive = "rating__star fas fa-star";
-      const starClassInactive = "rating__star far fa-star";
-      const starsLength = stars.length;
-      let i;
-      stars.map((star) => {
-        star.onclick = () => {
-          i = stars.indexOf(star);
-
-          if (star.className===starClassInactive) {
-            for (i; i >= 0; --i) stars[i].className = starClassActive;
-          } else {
-            for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
-          }
-        };
-      });
-    }
-    executeRating(ratingStars);
-  </script>
-</div>    
-</div>
-</div>
 
     </body>
+</head>
+
 </html>
